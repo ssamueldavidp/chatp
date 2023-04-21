@@ -1,0 +1,266 @@
+<style>
+    /* Works on Firefox */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: #b1b1b1 white;
+    }
+
+    /* Works on Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    *::-webkit-scrollbar-track {
+
+        background: white;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #b1b1b1;
+        border-radius: 5px;
+    }
+
+    .webchat__initialsAvatar--fromUser,
+    .webchat__initialsAvatar {
+        background-color: white !important;
+    }
+
+    div {
+        white-space: normal !important;
+    }
+
+
+
+    element.style>p {
+        font-size: 14px;
+        font-weight: 400;
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        margin: 0px;
+    }
+
+    input {
+        border-radius: 5px;
+        border-color: inherit;
+        border: 2px;
+        border-style: groove;
+        padding: 5px;
+        outline: none;
+    }
+
+    input:focus {
+        border-color: #36c;
+        border-style: solid;
+    }
+
+    select {
+        border-radius: 5px;
+        border-color: inherit;
+        border: 2px;
+        border-style: groove;
+        padding: 5px;
+        outline: none;
+    }
+
+    select:focus {
+        border-color: #36c;
+        border-style: solid;
+    }
+
+    img {
+        border-color: aliceblue;
+    }
+
+    button {
+        border-radius: 5px;
+        background-color: #36c !important;
+        border-color: white;
+        color: white !important;
+    }
+
+    #webchat {
+        height: 100%;
+        width: 100%;
+    }
+
+    #webchat>* {
+        font-size: 14px !important;
+    }
+
+    #webchat .webchat__send-box__main button {
+        background-color: white !important;
+    }
+
+
+    .ac-textBlock p {
+        margin: 0px !important;
+    }
+
+    /* .ac-container, .ac-adaptiveCard p{
+    font-family: "Calibri, 'Helvetica Neue', Arial, 'sans-serif'"!important;
+} */
+
+
+    .bext-chat-bot__wrapper {
+        width: 400px;
+        position: fixed;
+        bottom: 0;
+        right: 50px;
+        z-index: 9999;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .closelogo {
+        margin: 0px;
+        padding: 0px;
+        margin: 10px;
+        border-radius: 100% !important;
+        height: 70px;
+        width: 70px;
+    }
+
+    .bext-chat-bot__title {
+        margin: 0px;
+        padding: 0px;
+
+    }
+
+    .bext-chat-bot__noselect {
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Old versions of Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        /* Non-prefixed version, currently
+                              supported by Chrome, Edge, Opera and Firefox */
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .bext-chat-bot__icon {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .bext-chat-bot__chat {
+        height: 20;
+        overflow: hidden;
+        border-radius: 16px;
+    }
+
+    .bext-chat-bot__iframe {
+        border: none;
+        display: none;
+    }
+
+    .bext-chat-bot__open {
+        height: 510px;
+        display: initial;
+        width: 100%;
+    }
+
+    .bext-chat-bot__header {
+        width: 100%;
+        height: 100%;
+        background-color: #36c !important;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 0px;
+        margin: 0px;
+        z-index: 10;
+        position: relative;
+
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+    }
+
+    .bext-chat-bot__header h1,
+    h2 {
+        margin: 0;
+
+    }
+
+    .bext-chat-bot__title_header {
+        font-family: Segoe UI;
+        padding: "0px";
+        margin: "0px";
+        font-size: 23px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: center;
+    }
+
+    .bext-chat-bot__noselect {
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Old versions of Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        /* Non-prefixed version, currently
+                              supported by Chrome, Edge, Opera and Firefox */
+        padding: 0px;
+        margin: 0px;
+    }
+</style>
+
+
+<meta charset="UTF-8">
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ventana Chat Bot MINTRABAJO</title>
+<link rel="stylesheet" href="https://www.somintrabajo.gov.co/scripts/speechService.html">
+
+<!--* agregar esta parte al portal -->
+<div class="bext-chat-bot__wrapper">
+
+    <div class="bext-chat-bot__header" id="bext-chat-bot__btn">
+        <h1 class="bext-chat-bot__title bext-chat-bot__logom" margin="0px" padding="0px">
+
+        </h1>
+
+        <div class="bext-chat-bot__title bext-chat-bot__noselect bext-chat-bot__title_header">
+            <h1 style="font-size: 27px;">Ministerio del Trabajo</h1>
+            <h2 style="font-size: 17px;">Clara - Asistente virtual</h1>
+        </div>
+        <div class="bext-chat-bot__title bext-chat-bot__icon" padding="0px" margin="0px">
+            <!-- aca iría un icono -->
+            <img alt="Chatbot" aria-hidden="true" class="closelogo"
+                src="https://chatbotmintrabajo.blob.core.windows.net/almacenamientochatbot/Imagen final chatbot 150323.jpg">
+        </div>
+    </div>
+
+    <iframe id="bext-chat-bot__iframe" class="bext-chat-bot__iframe" width="400" height="0" src="https://www.somintrabajo.gov.co/scripts/speechService.html">
+
+    </iframe>
+</div>
+
+<script>
+    const btn = document.getElementById('bext-chat-bot__btn')
+    btn.addEventListener('click', function () {
+        const chat = document.getElementById('bext-chat-bot__iframe')
+        console.log(chat.offsetHeight)
+        if (chat.offsetHeight > 0) {
+            chat.classList.remove('bext-chat-bot__open')
+        } else {
+            chat.classList.add('bext-chat-bot__open')
+        }
+    })
+</script>
